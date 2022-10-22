@@ -1,2 +1,11 @@
-print("test "*8)
-print(2**0.5)
+from typing import Union
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
+
